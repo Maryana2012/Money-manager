@@ -1,7 +1,10 @@
+import FormNewCost from "components/FormNewCost/FormNewCost";
 const TrackerPage =()=>{
+
     return(
         <>
-        Tracker
+        <button type="button">Create new cost</button>
+        <FormNewCost />
         </>
     )
 } 

@@ -7,6 +7,7 @@ const Navigation = () => {
             <NavLink  to='/' style={({isActive})=>{return{color: isActive?'black':'blue'}}}><span>Home</span></NavLink>
             <NavLink  to='/registration' style={({isActive})=>{return{color: isActive?'black':'blue'}}}><span>Registration</span></NavLink>
             <NavLink  to='/login' style={({isActive})=>{return{color: isActive?'black':'blue'}}}><span>Login</span></NavLink>
+            <NavLink  to='/tracker' style={({isActive})=>{return{color: isActive?'black':'blue'}}}><span>Traker</span></NavLink>
         </nav>   
     )
 }
