@@ -10,7 +10,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter 
     // basename="/money-manager"
     >
-      <App />
+       <Provider store={store}>
+         <App />
+       </Provider>
+      
     </BrowserRouter>
   </React.StrictMode>
 );

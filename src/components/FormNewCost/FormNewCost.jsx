@@ -11,6 +11,9 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
+// import { addCost } from '../../redux/Costs/operations';
+
 const FormNewCost =() =>{
   const [selectedDate, setSelectedDate] = useState('');
   const [sum, setSum] = useState('');
@@ -32,10 +35,6 @@ const FormNewCost =() =>{
     const handleCommentChange = (event) =>{
       setComment(event.target.value)
     } 
-    // console.log('date:', date);
-    // console.log('sum:', sum);
-    // console.log('category:', category);
-    // console.log('comment:', comment)
     const  handleSubmit = (event) =>{
       event.preventDefault();
       const newCost =  {
@@ -44,7 +43,7 @@ const FormNewCost =() =>{
         category,
         comment
       }
-    dispatch(addCost(newCost));
+    // dispatch(addCost(newCost));
     }
 
     return(
