@@ -10,11 +10,14 @@ import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 const FormNewCost =() =>{
   const [selectedDate, setSelectedDate] = useState('');
   const [sum, setSum] = useState('');
   const [category, setCategory] = useState('');
   const [comment, setComment] = useState('');
+
+  const dispatch = useDispatch();
 
 
     const handleCategoryChange = (event) => {
@@ -41,7 +44,7 @@ const FormNewCost =() =>{
         category,
         comment
       }
-      console.log(newCost)
+    dispatch(addCost(newCost));
     }
 
     return(
